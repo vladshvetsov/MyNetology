@@ -29,6 +29,11 @@
 
 ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-01/1.jpg)
 
+
+![Схема в формате pkt](https://github.com/7Evgen7/Netology/blob/main/JPG/SFLT_01/hsrp_advanced.pkt)
+
+
+
 </details>
 
 ------
