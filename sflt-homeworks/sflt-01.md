@@ -33,6 +33,7 @@
 - На проверку отправьте получившуюся схему в формате pkt и скриншот, где виден процесс настройки маршрутизатора.
 
 <details>
+
 ![Схема в формате pkt](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-01/hsrp_advanced.pkt)
 
 
