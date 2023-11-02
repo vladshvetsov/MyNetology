@@ -9,9 +9,11 @@
 
 <details>
 
-![Screnshot]()
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-03/1.jpeg)
 
-![Screnshot]()
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-03/1-1.jpeg)
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-03/2.jpeg)
 
 </details>
 
@@ -27,9 +29,9 @@
 
 <details>
 
-![Screnshot]()
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-03/3.jpeg)
 
-![Screnshot]()
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-03/4.jpeg)
 
 
 </details>
