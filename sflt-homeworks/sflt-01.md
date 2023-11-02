@@ -52,8 +52,8 @@
 
 <details>
 
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-01/2.0.jpeg)
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-01/2.01.jpeg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-01/2_0.jpeg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-01/2_01.jpeg)
 
 </details>
 
@@ -102,7 +102,7 @@ vrrp_instance VI_1 {
 
 <details>
 
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-01/2.1.jpeg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-01/2_1.jpeg)
 ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-01/2.2.jpeg)
 
 
