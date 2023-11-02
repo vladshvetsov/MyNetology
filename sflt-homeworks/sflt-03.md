@@ -9,6 +9,8 @@
 
 <details>
 
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-03/01.jpeg)
+
 ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-03/1.jpeg)
 
 ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-03/1-1.jpeg)
