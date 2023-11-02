@@ -23,16 +23,22 @@
 - На данной схеме уже настроено отслеживание интерфейсов маршрутизаторов Gi0/1 (для нулевой группы)
 - Необходимо аналогично настроить отслеживание состояния интерфейсов Gi0/0 (для первой группы).
 - Для проверки корректности настройки, разорвите один из кабелей между одним из маршрутизаторов и Switch0 и запустите ping между PC0 и Server0.
-- На проверку отправьте получившуюся схему в формате pkt и скриншот, где виден процесс настройки маршрутизатора.
 
 <details>
 
 ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-01/1.jpg)
 
+</details>
 
-![Схема в формате pkt](https://github.com/7Evgen7/Netology/blob/main/JPG/SFLT_01/hsrp_advanced.pkt)
+- На проверку отправьте получившуюся схему в формате pkt и скриншот, где виден процесс настройки маршрутизатора.
 
+<details>
 
+![Схема в формате pkt](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-01/hsrp_advanced.pkt)
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-01/2.jpg)
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-01/3.jpg)
 
 </details>
 
