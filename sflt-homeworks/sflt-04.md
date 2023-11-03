@@ -30,6 +30,8 @@
 
 <details>
 
+![Схема в формате pkt](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-04/main.tf)
+
 ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-03/1.jpeg)
 ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-03/2.jpeg)
 ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-03/3.jpeg)
