@@ -32,10 +32,10 @@
 
 ![main.tf](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-04/main.tf)
 
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-03/1.jpeg)
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-03/2.jpeg)
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-03/3.jpeg)
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-03/4.jpeg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-04/1.jpeg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-04/2.jpeg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-04/3.jpeg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-04/4.jpeg)
 
 </details>
 
@@ -44,7 +44,7 @@
 
 <details>
 
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-03/5.jpeg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-04/5.jpeg)
 
 </details>
 
@@ -52,7 +52,7 @@
 
 <details>
 
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-03/6.jpeg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sflt-04/6.jpeg)
 
 
 </details>
