@@ -69,7 +69,6 @@
 
 ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sysdb-homework/sysdb-02/4_2.jpeg)
 
-
    
 </details>
 
@@ -87,5 +86,5 @@
 <details>
    
 ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sysdb-homework/sysdb-02/5.jpeg)
-   
+
 </details>
