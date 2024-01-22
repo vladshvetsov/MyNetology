@@ -46,7 +46,7 @@
 
 <details>
    
-![Screnshot](ttps://github.com/vladshvetsov/MyNetology/blob/main/JPG/sysdb-homework/sysdb-02/3.jpeg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sysdb-homework/sysdb-02/3.jpeg)
    
 </details>
 
@@ -63,11 +63,11 @@
 
 <details>
 
- ![Screnshot](ttps://github.com/vladshvetsov/MyNetology/blob/main/JPG/sysdb-homework/sysdb-02/4.jpeg)
+ ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sysdb-homework/sysdb-02/4.jpeg)
 
-![Screnshot](ttps://github.com/vladshvetsov/MyNetology/blob/main/JPG/sysdb-homework/sysdb-02/4_1.jpeg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sysdb-homework/sysdb-02/4_1.jpeg)
 
-![Screnshot](ttps://github.com/vladshvetsov/MyNetology/blob/main/JPG/sysdb-homework/sysdb-02/4_2.jpeg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sysdb-homework/sysdb-02/4_2.jpeg)
 
 
    
@@ -86,6 +86,6 @@
 
 <details>
    
-![Screnshot](github.com/vladshvetsov/MyNetology/blob/main/JPG/sflt-homeworks/sysde-02/5.jpeg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sysdb-homework/sysdb-02/5.jpeg)
    
 </details>
