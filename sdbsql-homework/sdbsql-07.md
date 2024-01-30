@@ -65,6 +65,12 @@ SAN-кластер:
  
 разделить таблицу Пользователи по географическому признаку (например, разделить пользователей на группы по регионам). Это позволит уменьшить нагрузку на базу данных в каждом регионе и улучшить производительность.
 
+<details>
+
+![Screnshot] (https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sdbsql-homework/sdbsql-07/1.jpeg)
+
+</details>
+
 * Вертикальный шардинг
 
 для таблицы Книги можно разделить их по жанрам или категориям. Это позволит улучшить скорость доступа к данным и уменьшить количество операций чтения.
@@ -75,7 +81,6 @@ SAN-кластер:
 
 <details>
 
-![Screnshot] (https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sdbsql-homework/sdbsql-07/1.jpeg)
 ![Screnshot] (https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sdbsql-homework/sdbsql-07/2.jpeg)
   
 </details>
