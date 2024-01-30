@@ -67,7 +67,7 @@ SAN-кластер:
 
 <details>
 
-![Screnshot] (https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sdbsql-homework/sdbsql-07/1.jpeg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sdbsql-homework/sdbsql-07/1.jpeg)
 
 </details>
 
@@ -81,7 +81,7 @@ SAN-кластер:
 
 <details>
 
-![Screnshot] (https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sdbsql-homework/sdbsql-07/2.jpeg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sdbsql-homework/sdbsql-07/2.jpeg)
   
 </details>
 
