@@ -74,8 +74,6 @@ channel.start_consuming()
 
 ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sysdb-homework/sysdb-04/2_4.jpeg)
    
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sysdb-homework/sysdb-04/2_1.jpeg)
-
 ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sysdb-homework/sysdb-04/2_2.jpeg)
 
 ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sysdb-homework/sysdb-04/2_3.jpeg)
@@ -130,5 +128,11 @@ $ rabbitmqadmin get queue='hello'
 ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sysdb-homework/sysdb-04/3_5.jpeg)
 
 ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sysdb-homework/sysdb-04/3_6.jpeg)
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sysdb-homework/sysdb-04/3_7.jpeg)
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sysdb-homework/sysdb-04/3_8.jpeg)
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sysdb-homework/sysdb-04/3_9.jpeg)
 
 </details>
