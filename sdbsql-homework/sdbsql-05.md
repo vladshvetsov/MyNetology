@@ -40,6 +40,9 @@ where date(p.payment_date) = '2005-07-30' and p.payment_date = r.rental_date and
 
 `Решение`
 
+Узкие места:
+*  применение функции over (partition by c.customer_id, f.title)
+*  при выполнении функции попадает f.title , что явялется избыточным, так как таблица film не используется.
 
 
 
