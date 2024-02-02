@@ -54,3 +54,25 @@ WHERE `length` > (SELECT avg (`length`) FROM film);
 ---
 
 
+***Задание 3***
+
+Получите информацию, за какой месяц была получена наибольшая сумма платежей, и добавьте информацию по количеству аренд за этот месяц.
+
+`Решение`
+
+
+<details>
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sdbsql-homework/sdbsql-04/3.jpeg)
+
+</details>
+
+```
+
+SELECT DATE_FORMAT (p.payment_date, '%Y-%M') AS Дата , (sum (p.amount)) AS Сумма , count ((p.rental_id)) AS Аренд
+FROM payment p 
+GROUP BY Дата
+ORDER BY Сумма DESC
+LIMIT 1;
+
+```
