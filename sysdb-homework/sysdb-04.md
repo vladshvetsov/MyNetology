@@ -71,6 +71,8 @@ channel.start_consuming()
 
    
 ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sysdb-homework/sysdb-04/2.jpeg)
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sysdb-homework/sysdb-04/2_4.jpeg)
    
 ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sysdb-homework/sysdb-04/2_1.jpeg)
 
