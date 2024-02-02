@@ -45,6 +45,7 @@ where date(p.payment_date) = '2005-07-30' and p.payment_date = r.rental_date and
 *  при выполнении функции попадает f.title , что явялется избыточным, так как таблица film не используется.
 
 
+```
 
 SELECT CONCAT(c.last_name, ' ', c.first_name) AS name, SUM(p.amount)
 FROM payment p
@@ -54,13 +55,10 @@ join inventory i on i.inventory_id = r.inventory_id
 WHERE cast(p.payment_date as date) = '2005-07-30' and cast(p.payment_date as date) < '2005-07-31'
 GROUP BY c.customer_id;
 
+```
 
 <details>
 
 ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/sdbsql-homework/sdbsql-05/2.jpeg)
 
 </details>
-
-
-```
-
