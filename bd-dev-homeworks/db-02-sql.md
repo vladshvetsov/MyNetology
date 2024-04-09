@@ -23,7 +23,7 @@ docker run --name postgre1 -d -e POSTGRES_HOST_AUTH_METHOD=trust -v C:/Temp/sql_
 
 `-v C:/Temp/sql_backup:/tmp/backup` - монтирует каталог `C:/Temp/sql_backup` с хост-системы в каталог `/tmp/backup внутри контейнера`.
 
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/1.jpg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/1.jpeg)
 
 Это позволяет хранить данные PostgreSQL на хост-системе.
 
@@ -118,18 +118,18 @@ GRANT SELECT,INSERT,UPDATE,DELETE ON orders, clients to "test_user";
 ```sql
 SELECT datname FROM pg_database;
 ```
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/2.jpg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/2.jpeg)
 
 - описание таблиц (describe);
 ```sql
 \d+ clients
 ```
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/3.jpg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/3.jpeg)
 
 ```sql
 \d+ orders
 ```
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/4.jpg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/4.jpeg)
 
 - SQL-запрос для выдачи списка пользователей с правами над таблицами test_db:
 
@@ -138,7 +138,7 @@ SELECT table_name,grantee,privilege_type
 FROM information_schema.table_privileges
 WHERE table_schema NOT IN ('information_schema','pg_catalog');
 ```
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/5.jpg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/5.jpeg)
 
 </details>
 
@@ -185,7 +185,7 @@ INSERT INTO orders (наименование,цена) VALUES
 ('Гитара',4000);
 ```
 
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/6.jpg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/6.jpeg)
 
 
 ```sql
@@ -201,18 +201,18 @@ INSERT INTO clients (фамилия,страна_проживания,заказ
 ('Ritchie Blackmore','Russia',NULL);
 ```
 
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/7.jpg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/7.jpeg)
 
 Количество записей для таблиц:
 ```sql
 select count(*) from clients;
 ```
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/8.jpg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/8.jpeg)
 
 ```sql
 select count(*) from orders;
 ```
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/9.jpg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/9.jpeg)
 
 </details>
 
@@ -252,20 +252,20 @@ SET заказ_id = (SELECT id FROM orders WHERE наименование = 'Г�
 WHERE фамилия = 'Иоганн Себастьян Бах';
 ```
 
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/10.jpg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/10.jpeg)
 
 
 ```sql
 select * from clients;
 ```
 
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/11.jpg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/11.jpeg)
 
 ```sql
 select * from orders;
 ```
 
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/12.jpg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/12.jpeg)
 
 </details>
 
@@ -283,7 +283,7 @@ select * from orders;
 EXPLAIN select * from clients;
 ```
 
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/13.jpg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/13.jpeg)
 
 
 **Seq Scan** — означает, что используется последовательное, блок за блоком, чтение данных таблицы clients
@@ -336,9 +336,9 @@ docker exec -it postgre1 pg_dump -h localhost -U postgres -F t -f /tmp/backup/ba
 docker run --name postgre2 -d -e POSTGRES_HOST_AUTH_METHOD=trust -v C:/Temp/sql2_base:/var/lib/postgresql/data -v C:/Temp/sql2_backup:/tmp/backup postgres:12
 ```
 
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/16.jpg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/16.jpeg)
 
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/17.jpg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/17.jpeg)
 
 
 Создаем БД в докер-контейнере postgre2:
@@ -357,6 +357,6 @@ docker exec -it postgre2 psql -U postgres -f /tmp/backup/roles.sql
 docker exec -it postgre2 pg_restore -U postgres -Ft -v -d test_db /tmp/backup/backup_1.tar
 ```
 
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/15.jpg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/bd-dev-homeworks/db-02-sql/15.jpeg)
 
 </details>
