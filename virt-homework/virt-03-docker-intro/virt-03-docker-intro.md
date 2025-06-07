@@ -120,12 +120,16 @@ Ctrl-C отправляет SIGINT, который прервет работу �
 6. Установите любимый текстовый редактор(vim, nano итд) с помощью apt-get.
 7. Отредактируйте файл "/etc/nginx/conf.d/default.conf", заменив порт "listen 80" на "listen 81".
 
+```
+
 Docker exec -it custom-nginx-t2 bash
 apt update
 
 apt install nano 
 
 nano /etc/nginx/conf.d/default.conf
+
+```
 
 ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-03-docker-intro/6.jpeg)
 
@@ -137,10 +141,15 @@ nano /etc/nginx/conf.d/default.conf
 
 ```
 
+12. Удалите запущенный контейнер "custom-nginx-t2", не останавливая его.(воспользуйтесь --help или google)
 
+```
 
+docker rm -f custom-nginx-t2
 
+```
 
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-03-docker-intro/7.jpeg)
 
 
 
@@ -157,6 +166,27 @@ nano /etc/nginx/conf.d/default.conf
 
 
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод.
+
+
+### Ответ
+
+<details>
+
+```
+docker run -it -v $(pwd):/data -d centos:centos7 &
+docker run -it -v $(pwd):/data -d debian &
+```
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-03-docker-intro/8.jpeg)
+
+```
+docker exec -it 66402ade94f7 bash -c "echo 'Hello from CentOS' > /data/centos_file.txt" touch host.txt
+docker exec -it ac9b720526c3 bash -c "ls -l /data"
+```
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-03-docker-intro/8.jpeg)
+
+</details>
 
 
 ## Задача 5
