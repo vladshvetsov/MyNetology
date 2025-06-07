@@ -40,19 +40,8 @@ docker push 100gramm/custom-nginx:1.0.0
 
 ```
 
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-01-basics/1.jpeg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-03-docker-intro/1.jpeg)
    
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-01-basics/2.jpeg)
-
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-01-basics/3.jpeg)
-
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-01-basics/4.jpeg)
-
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-01-basics/5.jpeg)
-
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-01-basics/6.jpeg)
-
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-01-basics/7.jpeg)
 
 
 </details>
