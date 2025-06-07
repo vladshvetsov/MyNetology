@@ -29,6 +29,34 @@ Hey, Netology
 - Соберите и отправьте созданный образ в свой dockerhub-репозитории c tag 1.0.0 (ТОЛЬКО ЕСЛИ ЕСТЬ ДОСТУП). 
 - Предоставьте ответ в виде ссылки на https://hub.docker.com/<username_repo>/custom-nginx/general .
 
+<details>
+
+```
+
+docker build -t custom-nginx:1.0.0 .
+docker login
+docker tag custom-nginx:1.0.0 100gramm/custom-nginx:1.0.0
+docker push 100gramm/custom-nginx:1.0.0
+
+```
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-01-basics/1.jpeg)
+   
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-01-basics/2.jpeg)
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-01-basics/3.jpeg)
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-01-basics/4.jpeg)
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-01-basics/5.jpeg)
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-01-basics/6.jpeg)
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-01-basics/7.jpeg)
+
+
+</details>
+
 ## Задача 2
 1. Запустите ваш образ custom-nginx:1.0.0 командой docker run в соответвии с требованиями:
 - имя контейнера "ФИО-custom-nginx-t2"
