@@ -29,6 +29,9 @@ Hey, Netology
 - Соберите и отправьте созданный образ в свой dockerhub-репозитории c tag 1.0.0 (ТОЛЬКО ЕСЛИ ЕСТЬ ДОСТУП). 
 - Предоставьте ответ в виде ссылки на https://hub.docker.com/<username_repo>/custom-nginx/general .
 
+
+### Ответ
+
 <details>
 
 ```
@@ -42,6 +45,9 @@ docker push 100gramm/custom-nginx:1.0.0
 
 ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-03-docker-intro/1.jpeg)
    
+https://hub.docker.com/r/100gramm/custom-nginx
+
+
 
 
 </details>
@@ -56,6 +62,25 @@ docker push 100gramm/custom-nginx:1.0.0
 4. Убедитесь с помощью curl или веб браузера, что индекс-страница доступна.
 
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод.
+
+### Ответ
+
+
+<details>
+
+```
+
+docker run --name SVS-custom-nginx-t2 -p 8080:80 -d 100gramm/custom-nginx:1.0.0
+
+docker rename SVS-custom-nginx-t2 custom-nginx-t2
+
+```
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-03-docker-intro/2.jpeg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-03-docker-intro/3.jpeg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-03-docker-intro/4.jpeg)
+
+</details>
 
 
 ## Задача 3
@@ -73,6 +98,53 @@ docker push 100gramm/custom-nginx:1.0.0
 12. Удалите запущенный контейнер "custom-nginx-t2", не останавливая его.(воспользуйтесь --help или google)
 
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод.
+
+
+### Ответ
+
+<details>
+
+```
+1. Воспользуйтесь docker help или google, чтобы узнать как подключиться к стандартному потоку ввода/вывода/ошибок контейнера "custom-nginx-t2".
+
+docker attach custom-nginx-t2
+
+3. Выполните ```docker ps -a``` и объясните своими словами почему контейнер остановился.
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-03-docker-intro/5.jpeg)
+
+Ctrl-C отправляет SIGINT, который прервет работу приложения. Обычно это приводит к прерыванию, но решение об этом принимает приложение.
+А это значит что мы отправили прерывание работы контейнеру.
+
+5. Зайдите в интерактивный терминал контейнера "custom-nginx-t2" с оболочкой bash.
+6. Установите любимый текстовый редактор(vim, nano итд) с помощью apt-get.
+7. Отредактируйте файл "/etc/nginx/conf.d/default.conf", заменив порт "listen 80" на "listen 81".
+
+Docker exec -it custom-nginx-t2 bash
+apt update
+
+apt install nano 
+
+nano /etc/nginx/conf.d/default.conf
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-03-docker-intro/6.jpeg)
+
+
+10. Проверьте вывод команд: ```ss -tlpn | grep 127.0.0.1:8080``` , ```docker port custom-nginx-t2```, ```curl http://127.0.0.1:8080```. Кратко объясните суть возникшей проблемы.
+
+```
+Мы изменили порт приложения которое работает в контейнере,но port-forvarding все еще казывает 80.
+
+```
+
+```
+
+
+
+
+
+
+</details>
 
 ## Задача 4
 
