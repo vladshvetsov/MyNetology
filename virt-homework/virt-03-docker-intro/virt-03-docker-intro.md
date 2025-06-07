@@ -240,6 +240,7 @@ services:
 ### Ответ
 
 <details>
+
 ```
 mkdir -p /tmp/netology/docker/task5
 cd /tmp/netology/docker/task5
@@ -249,6 +250,7 @@ nano compose.yaml
 
 nano docker-compose.yaml
 docker compose up -d
+
 ```
 Docker Compose работает с 2 типами файлов (compose.yaml и docker-compose.yaml),но в последней версии приоритет отдается compose.yaml.При запуске Docker Compose, он об этом и сообщает
 
