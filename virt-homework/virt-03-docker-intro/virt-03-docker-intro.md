@@ -236,6 +236,70 @@ services:
 
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод, файл compose.yaml , скриншот portainer c задеплоенным компоузом.
 
+
+### Ответ
+
+<details>
+mkdir -p /tmp/netology/docker/task5
+cd /tmp/netology/docker/task5
+touch compose.yaml
+touch docker-compose.yaml
+nano compose.yaml 
+
+nano docker-compose.yaml
+docker compose up -d
+
+Docker Compose работает с 2 типами файлов (compose.yaml и docker-compose.yaml),но в последней версии приоритет отдается compose.yaml.При запуске Docker Compose, он об этом и сообщает
+
+
+Изменяем файл compose.yaml и дописываем в него возможность запускать второй compose файл через include/
+
+```
+nano compose.yaml
+
+version: "3"
+include:
+  - docker-compose.yaml
+services:
+  portainer:
+    image: portainer/portainer-ce:latest
+    network_mode: host
+    ports:
+      - "9000:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+```
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-03-docker-intro/11.jpeg)
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-03-docker-intro/12.jpeg)
+
+
+Выходим в хостовую машину и пушим нужный нам образ в локальный репозиторий(Иначе пункт 5.5 не выполнить)
+
+
+
+```
+
+docker tag 100gramm/custom-nginx:1.0.0  localhost:5000/custom-nginx:latest
+docker push  localhost:5000/custom-nginx:latest
+
+```
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-03-docker-intro/13.jpeg)
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-03-docker-intro/14.jpeg)
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-03-docker-intro/15.jpeg)
+
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-03-docker-intro/16.jpeg)
+
+В последнем пункте мы видим, что после удаления манифеста у нас выскочило предупреждение - что сревисы запущенные чеерз docker compose отличаются от тех что находятся в текущем манифесте и предлагает нам или имсправить проблему с файлом или удлаишь личшии контейнеры (которые отсутствую в текущем манифесте).
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/virt-homework/virt-03-docker-intro/17.jpeg)
+
+</details>
+
 ---
 
 ### Правила приема
