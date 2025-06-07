@@ -104,7 +104,7 @@ docker rename SVS-custom-nginx-t2 custom-nginx-t2
 
 <details>
 
-```
+
 1. Воспользуйтесь docker help или google, чтобы узнать как подключиться к стандартному потоку ввода/вывода/ошибок контейнера "custom-nginx-t2".
 
 docker attach custom-nginx-t2
@@ -137,7 +137,7 @@ nano /etc/nginx/conf.d/default.conf
 
 ```
 
-```
+
 
 
 
