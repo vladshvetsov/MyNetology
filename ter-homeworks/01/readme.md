@@ -30,14 +30,13 @@
 
 ### Ответ
 
-<details>
-
-personal.auto.tfvars
 
 
-</details>
+`personal.auto.tfvars`
 
-3. Выполните код проекта. Найдите  в state-файле секретное содержимое созданного ресурса **random_password**, пришлите в качестве ответа конкретный ключ и его значение.
+
+
+1. Выполните код проекта. Найдите  в state-файле секретное содержимое созданного ресурса **random_password**, пришлите в качестве ответа конкретный ключ и его значение.
 
 ### Ответ
 
@@ -70,10 +69,10 @@ resource "docker_container" "1nginx" {
 
 ```
 в строке
-==resource "docker_image" {== отсутствует имя создаваемого объекта у ресурса "docker_image"
+`resource "docker_image" {` отсутствует имя создаваемого объекта у ресурса "docker_image"
 
-== resource "docker_container" "1nginx" { == имя не должно начинаться с цифры
-==   name  = "example_${random_password.random_string_FAKE.resulT}" == тут 2 ошибки - сслыается на несуществующий ресурс random_string_FAKE (слово FAKE лишнее) надо как задано в resource "random_password" "random_string" ,
+`resource "docker_container" "1nginx" {`  имя не должно начинаться с цифры
+`name  = "example_${random_password.random_string_FAKE.resulT}"`  тут 2 ошибки - сслыается на несуществующий ресурс random_string_FAKE (слово FAKE лишнее) надо как задано в resource "random_password" "random_string" ,
 Оопечатка в resulT  (Т->t)
 
 ---
@@ -94,7 +93,7 @@ resource "docker_container" "nginx" {
 </details>
 
 
-5. Выполните код. В качестве ответа приложите: исправленный фрагмент кода и вывод команды ```docker ps```.
+1. Выполните код. В качестве ответа приложите: исправленный фрагмент кода и вывод команды ```docker ps```.
 
 ### Ответ
 
@@ -106,7 +105,7 @@ resource "docker_container" "nginx" {
 
 </details>
 
-1. Замените имя docker-контейнера в блоке кода на ```hello_world```. Не перепутайте имя контейнера и имя образа. Мы всё ещё продолжаем использовать name = "nginx:latest". Выполните команду ```terraform apply -auto-approve```.
+6. Замените имя docker-контейнера в блоке кода на ```hello_world```. Не перепутайте имя контейнера и имя образа. Мы всё ещё продолжаем использовать name = "nginx:latest". Выполните команду ```terraform apply -auto-approve```.
 Объясните своими словами, в чём может быть опасность применения ключа  ```-auto-approve```. Догадайтесь или нагуглите зачем может пригодиться данный ключ? В качестве ответа дополнительно приложите вывод команды ```docker ps```.
 
 ### Ответ
