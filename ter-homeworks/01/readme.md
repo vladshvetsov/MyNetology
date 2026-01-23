@@ -70,8 +70,9 @@ resource "docker_container" "1nginx" {
 ```
 в строке
 `resource "docker_image" {` отсутствует имя создаваемого объекта у ресурса "docker_image"
-
+в строке
 `resource "docker_container" "1nginx" {`  имя не должно начинаться с цифры
+в строке
 `name  = "example_${random_password.random_string_FAKE.resulT}"`  тут 2 ошибки - сслыается на несуществующий ресурс random_string_FAKE (слово FAKE лишнее) надо как задано в resource "random_password" "random_string" ,
 Оопечатка в resulT  (Т->t)
 
