@@ -37,16 +37,127 @@ personal.auto.tfvars
 
 </details>
 
-1. Выполните код проекта. Найдите  в state-файле секретное содержимое созданного ресурса **random_password**, пришлите в качестве ответа конкретный ключ и его значение.
-2. Раскомментируйте блок кода, примерно расположенный на строчках 29–42 файла **main.tf**.
+3. Выполните код проекта. Найдите  в state-файле секретное содержимое созданного ресурса **random_password**, пришлите в качестве ответа конкретный ключ и его значение.
+
+### Ответ
+
+<details>
+
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/ter-homeworks/01/2.jpeg)
+
+ "result": "otcXX39hUNKFZiGj"
+
+</details>
+
+4. Раскомментируйте блок кода, примерно расположенный на строчках 29–42 файла **main.tf**.
 Выполните команду ```terraform validate```. Объясните, в чём заключаются намеренно допущенные ошибки. Исправьте их.
-1. Выполните код. В качестве ответа приложите: исправленный фрагмент кода и вывод команды ```docker ps```.
-2. Замените имя docker-контейнера в блоке кода на ```hello_world```. Не перепутайте имя контейнера и имя образа. Мы всё ещё продолжаем использовать name = "nginx:latest". Выполните команду ```terraform apply -auto-approve```.
+
+### Ответ
+
+<details>
+
+исходный код
+```
+resource "docker_image" {
+  name         = "nginx:latest"
+  keep_locally = true
+}
+
+resource "docker_container" "1nginx" {
+  image = docker_image.nginx.image_id
+  name  = "example_${random_password.random_string_FAKE.resulT}"
+
+```
+в строке
+==resource "docker_image" {== отсутствует имя создаваемого объекта у ресурса "docker_image"
+
+== resource "docker_container" "1nginx" { == имя не должно начинаться с цифры
+==   name  = "example_${random_password.random_string_FAKE.resulT}" == тут 2 ошибки - сслыается на несуществующий ресурс random_string_FAKE (слово FAKE лишнее) надо как задано в resource "random_password" "random_string" ,
+Оопечатка в resulT  (Т->t)
+
+---
+Исправленый код
+
+```
+resource "docker_image" "nginx" {
+  name         = "nginx:latest"
+  keep_locally = true
+}
+
+resource "docker_container" "nginx" {
+  image = docker_image.nginx.image_id
+  name  = "example_${random_password.random_string.result}"
+
+```
+
+</details>
+
+
+5. Выполните код. В качестве ответа приложите: исправленный фрагмент кода и вывод команды ```docker ps```.
+
+### Ответ
+
+<details>
+
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/ter-homeworks/01/3.jpeg)
+
+
+</details>
+
+1. Замените имя docker-контейнера в блоке кода на ```hello_world```. Не перепутайте имя контейнера и имя образа. Мы всё ещё продолжаем использовать name = "nginx:latest". Выполните команду ```terraform apply -auto-approve```.
 Объясните своими словами, в чём может быть опасность применения ключа  ```-auto-approve```. Догадайтесь или нагуглите зачем может пригодиться данный ключ? В качестве ответа дополнительно приложите вывод команды ```docker ps```.
-1. Уничтожьте созданные ресурсы с помощью **terraform**. Убедитесь, что все ресурсы удалены. Приложите содержимое файла **terraform.tfstate**. 
-2. Объясните, почему при этом не был удалён docker-образ **nginx:latest**. Ответ **ОБЯЗАТЕЛЬНО НАЙДИТЕ В ПРЕДОСТАВЛЕННОМ КОДЕ**, а затем **ОБЯЗАТЕЛЬНО ПОДКРЕПИТЕ** строчкой из документации [**terraform провайдера docker**](https://library.tf/providers/kreuzwerker/docker/latest).  (ищите в классификаторе resource docker_image )
+
+### Ответ
+
+<details>
+
+Использованеи ключа -auto-approve оправдано только в CICD и то при мануальном подтверждении.При использовании данного ключа не требуется подтвержение на apply.
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/ter-homeworks/01/4.jpeg)
 
 
+</details>
+
+
+7. Уничтожьте созданные ресурсы с помощью **terraform**. Убедитесь, что все ресурсы удалены. Приложите содержимое файла **terraform.tfstate**. 
+
+### Ответ
+
+<details>
+
+```
+{
+  "version": 4,
+  "terraform_version": "1.12.2",
+  "serial": 12,
+  "lineage": "8b59a2f3-0a44-7149-bcbe-b80eeda7cc18",
+  "outputs": {},
+  "resources": [],
+  "check_results": null
+}
+```
+
+</details>
+
+8. Объясните, почему при этом не был удалён docker-образ **nginx:latest**. Ответ **ОБЯЗАТЕЛЬНО НАЙДИТЕ В ПРЕДОСТАВЛЕННОМ КОДЕ**, а затем **ОБЯЗАТЕЛЬНО ПОДКРЕПИТЕ** строчкой из документации [**terraform провайдера docker**](https://library.tf/providers/kreuzwerker/docker/latest).  (ищите в классификаторе resource docker_image )
+
+### Ответ
+
+<details>
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/ter-homeworks/01/5.jpeg)
+
+Вся магия скрыта в строчке - keep_locally = true.
+Выдержка из оф доки:
+
+```
+keep_locally (Boolean) If true, then the Docker image won't be deleted on destroy operation. 
+If this is false, it will delete the image from the docker local storage on destroy operation.
+```
+
+</details>
 ------
 
 ## Дополнительное задание (со звёздочкой*)
