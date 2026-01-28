@@ -51,8 +51,45 @@
 6. Подключитесь к консоли ВМ через ssh и выполните команду ``` curl ifconfig.me```.
 Примечание: К OS ubuntu "out of a box, те из коробки" необходимо подключаться под пользователем ubuntu: ```"ssh ubuntu@vm_ip_address"```. Предварительно убедитесь, что ваш ключ добавлен в ssh-агент: ```eval $(ssh-agent) && ssh-add``` Вы познакомитесь с тем как при создании ВМ создать своего пользователя в блоке metadata в следующей лекции.;
 
+### Ответ
+
+<details>
+
+   
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/ter-homeworks/02/2.jpeg)
+   
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/ter-homeworks/02/3.jpeg)
+
+</details>
+
 7. Ответьте, как в процессе обучения могут пригодиться параметры ```preemptible = true``` и ```core_fraction=5``` в параметрах ВМ.
 
+### Ответ
+
+<details>
+
+preemptible = true https://yandex.cloud/ru/docs/compute/concepts/preemptible-vm
+
+```
+Прерываемые виртуальные машины — это виртуальные машины, 
+которые могут быть принудительно остановлены в любой момент. 
+Это может произойти в двух случаях:
+
+Если с момента запуска виртуальной машины прошло 24 часа.
+Если возникнет нехватка ресурсов для запуска обычной виртуальной машины в той же зоне доступности. 
+Вероятность такого события низкая, но может меняться изо дня в день.
+
+```
+
+core_fraction=5 https://yandex.cloud/ru/docs/compute/concepts/performance-levels
+
+```
+При уровне производительности 20% ВМ будет иметь доступ 
+к физическим ядрам как минимум 20% времени — 200 миллисекунд в течение каждой секунды.
+
+```
+
+</details>
 В качестве решения приложите:
 
 - скриншот ЛК Yandex Cloud с созданной ВМ, где видно внешний ip-адрес;
@@ -66,6 +103,16 @@
 2. Объявите нужные переменные в файле variables.tf, обязательно указывайте тип переменной. Заполните их **default** прежними значениями из main.tf. 
 3. Проверьте terraform plan. Изменений быть не должно. 
 
+### Ответ
+
+<details>
+
+После 'terraform plan'  конфигурация не изменилась
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/ter-homeworks/02/4.jpeg)
+   
+
+</details>
 
 ### Задание 3
 
@@ -73,6 +120,71 @@
 2. Скопируйте блок ресурса и создайте с его помощью вторую ВМ в файле main.tf: **"netology-develop-platform-db"** ,  ```cores  = 2, memory = 2, core_fraction = 20```. Объявите её переменные с префиксом **vm_db_** в том же файле ('vms_platform.tf').  ВМ должна работать в зоне "ru-central1-b"
 3. Примените изменения.
 
+### Ответ
+
+<details>
+
+vms_platform.tf
+
+``` 
+variable "vm_db_zone" {
+  type = string
+  default = "ru-central1-b"
+  description = "Рабочая зона"
+}
+
+variable "vm_db_name" {
+  type        = string
+  default     = "netology-develop-platform-db"
+  description = "Имя виртуальной машины"
+}
+
+variable "vm_db_platform_id" {
+  type = string
+  default = "standard-v3"
+  description = "ID виртуальной платформы"
+}
+
+variable "vm_db_hw_cores" {
+  type = number
+  default = 2
+  description = "Количество виртуальных ядер"
+}
+
+variable "vm_db_hw_memory" {
+  type = number
+  default = 2
+  description = "Объем оперативной памяти"
+}
+
+variable "vm_db_core_frac" {
+  type = number
+  default = 20
+  description = "Ограничение пиковой производительности CPU"
+}
+
+variable "vm_db_hw_preemptible" {
+  type = bool
+  default = true
+  description = "Прерываемость работы ВМ"
+}
+
+variable "vm_db_hw_nat" {
+  type = bool
+  default = true
+  description = "Активировать NAT"
+}
+
+variable "vm_db_hw_serial_port_enable" {
+  type = number
+  default = 1
+  description = "Серийный порт для удаленного доступа"
+}  
+
+```
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/ter-homeworks/02/5.jpeg)
+
+</details>
 
 ### Задание 4
 
@@ -81,6 +193,30 @@
 
 В качестве решения приложите вывод значений ip-адресов команды ```terraform output```.
 
+### Ответ
+
+<details>
+
+outputs.tf
+
+```
+output "VMs_output" {
+  value = {
+    VM_web_name   = yandex_compute_instance.platform_web.name
+    VM_web_FQDN   = yandex_compute_instance.platform_web.fqdn
+    VM_web_ext_ip = yandex_compute_instance.platform_web.network_interface[0].nat_ip_address
+    VM_db_name    = yandex_compute_instance.platform_db.name
+    VM_db_FQDN   = yandex_compute_instance.platform_db.fqdn
+    VM_db_ext_ip = yandex_compute_instance.platform_db.network_interface[0].nat_ip_address
+  }
+}
+
+```
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/ter-homeworks/02/6.jpeg)
+   
+
+</details>
 
 ### Задание 5
 
@@ -88,6 +224,28 @@
 2. Замените переменные внутри ресурса ВМ на созданные вами local-переменные.
 3. Примените изменения.
 
+### Ответ
+
+<details>
+
+locals.tf
+
+```
+
+locals {
+  lplatform    = "netology-develop-platform"
+  lweb         = "web"
+  ldb          = "db"
+  vm_web_lname = "${ local.lplatform }-${ local.lweb }"
+  vm_db_lname  = "${ local.lplatform }-${ local.ldb }"
+}
+
+```
+
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/ter-homeworks/02/6.jpeg)
+   
+
+</details>
 
 ### Задание 6
 
