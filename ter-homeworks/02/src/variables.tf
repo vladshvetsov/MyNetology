@@ -48,29 +48,31 @@ variable "default_zone2" {
 }
 
 ###ssh vars
-
+/*
 variable "vms_ssh_root_key" {
   type        = string
   default     = "/home/vlad/netology_github/MyNetology/ter-homeworks/terraform-cloud/your_ssh_ed25519_key.pub"
   description = "ssh-keygen -t ed25519"
 }
-
+*/
 variable "family_name" {
   type        = string
   default     = "ubuntu-2004-lts"
   description = "Семейство ОС"
 }
+/*
   variable "vm_web_name" {
   type        = string
   default     = "netology-develop-platform-web"
   description = "Имя виртуальной машины"
 }
+*/
   variable "vm_web_platform_id" {
   type = string
   default = "standard-v3"
   description = "ID виртуальной платформы"
 }
-
+/*
 variable "vm_web_hw_cores" {
   type = number
   default = 2
@@ -87,7 +89,7 @@ variable "vm_web_core_frac" {
   default = 20
   description = "Ограничение пиковой производительности CPU"
 }
-
+*/
 variable "vm_web_hw_preemptible" {
   type = bool
   default = true
@@ -98,8 +100,36 @@ variable "vm_web_hw_nat" {
   default = true
   description = "Активировать NAT"
 }
+/*
 variable "vm_web_hw_serial_port_enable" {
   type = number
   default = 1
   description = "Активировать серийный порт для удаленного доступа"
+}
+*/
+
+variable "vms_resources" {
+  type = map(map(number))
+  description = "Resources for VMs"
+  default = {
+    vm_web_resources = {
+      cores = 2
+      memory = 1
+      core_fraction = 20
+    }
+    vm_db_resources = {
+      cores = 2
+      memory = 2
+      core_fraction = 20
+    }
+  }
+}
+
+variable "common_metadata" {
+     description = "Common meta data"
+            type = map(string)
+         default = {
+           serial-port-enable = "1"
+           ssh-keys           = "ubuntu:/home/vlad/netology_github/MyNetology/ter-homeworks/terraform-cloud/your_ssh_ed25519_key.pub"
+         }
 }
