@@ -1,11 +1,13 @@
 ###cloud vars
 variable "token" {
   type        = string
+  default     = "b1gvibjotoc6e7f5j8a5"
   description = "OAuth-token; https://cloud.yandex.ru/docs/iam/concepts/authorization/oauth-token"
 }
 
 variable "cloud_id" {
   type        = string
+  default     = "b1gfr53gu9f2vbflut6n"
   description = "https://cloud.yandex.ru/docs/resource-manager/operations/cloud/get-id"
 }
 
