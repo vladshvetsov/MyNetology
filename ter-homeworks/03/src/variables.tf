@@ -85,6 +85,43 @@ variable "each_vm" {
               disk_volume = 5
     }]
 }
+
+# Task 3
+variable "vdisks" {
+  type = object({
+    name = string
+    counter = number
+    type = string
+    size = number
+  })
+
+  default = {
+    name = "vdisk"
+    counter = 3
+    type = "network-hdd"
+    size = 1
+  }
+  description = "Info about disks"
+}
+
+variable "storage_vm" {
+  type = object({
+    name = string
+    hostname = string
+    cores = number
+    memory = number
+    core_fraction = number
+  })
+  default = {
+    name = "storage"
+    hostname = "storage"
+    cores = 2
+    memory = 1
+    core_fraction = 20
+  }
+}
+
+
 # Common vars
 variable "common_core_fraction" {
   type        = number
