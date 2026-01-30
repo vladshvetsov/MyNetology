@@ -34,7 +34,7 @@
 <details>
 
 
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/ter-homeworks/03/1.jpeg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/terraform-03/JPG/ter-homeworks/03/1.jpeg)
  
 
 </details>
@@ -59,9 +59,9 @@ variable "each_vm" {
 <details>
 
 
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/ter-homeworks/03/2.jpeg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/terraform-03/JPG/ter-homeworks/03/2.jpeg)
 
- ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/ter-homeworks/03/3.jpeg)
+ ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/terraform-03/JPG/ter-homeworks/03/3.jpeg)
 
 
 </details>
@@ -77,9 +77,9 @@ variable "each_vm" {
 <details>
 
 
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/ter-homeworks/03/4.jpeg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/terraform-03/JPG/ter-homeworks/03/4.jpeg)
 
- ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/ter-homeworks/03/5.jpeg)
+ ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/terraform-03/JPG/ter-homeworks/03/5.jpeg)
 
 
 </details>
@@ -118,9 +118,9 @@ storage ansible_host=<внешний ip-адрес> fqdn=<полное доме�
 <details>
 
 
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/ter-homeworks/03/6.jpeg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/terraform-03/JPG/ter-homeworks/03/6.jpeg)
 
- ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/ter-homeworks/03/7.jpeg)
+ ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/terraform-03/JPG/ter-homeworks/03/7.jpeg)
 
 
 </details>
