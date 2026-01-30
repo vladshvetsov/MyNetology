@@ -1,0 +1,12 @@
+# Task 4
+resource "local_file" "inventory" {
+  content = templatefile("${path.module}/hosts.tftpl",
+
+    {
+    webservers = yandex_compute_instance.web
+    databases  = yandex_compute_instance.main_replica
+    storage    = [yandex_compute_instance.storage]
+
+  })
+  filename = "${abspath(path.module)}/hosts.cfg"
+}

@@ -1,4 +1,4 @@
-# Task 2.2
+# Task 2
 resource "yandex_compute_instance" "main_replica" {
   for_each         = { for i in var.each_vm : i.vm_name => i }
 

@@ -1,5 +1,4 @@
 # Task 3
-
 resource "yandex_compute_disk" "virtual_disks" {
   zone = var.default_zone
   count = var.vdisks.counter
