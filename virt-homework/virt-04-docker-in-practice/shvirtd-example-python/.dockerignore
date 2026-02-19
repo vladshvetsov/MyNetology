@@ -1,0 +1,5 @@
+.env
+venv
+README*
+*.pdf
+Docker*
