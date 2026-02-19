@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REPO_URL="https://github.com/vladshvetsov/virt-homework-virt-04-docker-in-practice-shvirtd-example-python"
+REPO_URL="https://github.com/vladshvetsov/virt-homework-virt-04-docker-in-practice-shvirtd-example-python.git"
 TARGET_DIR="/opt/my_project"
 
 if [ -d "$TARGET_DIR" ]; then
