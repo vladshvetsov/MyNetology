@@ -81,9 +81,9 @@ node_load15
 
 ![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/shmon-homework/hw_03/4.jpeg)
 
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/shmon-homework/hw_03/5.jpeg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/shmon-homework/hw_03/5_1.jpeg)
 
-![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/shmon-homework/hw_03/6.jpeg)
+![Screnshot](https://github.com/vladshvetsov/MyNetology/blob/main/JPG/shmon-homework/hw_03/6.jpg)
 
 </details>
 
