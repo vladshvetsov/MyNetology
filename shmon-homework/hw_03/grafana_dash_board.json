@@ -22,15 +22,12 @@
     ]
   },
   "editable": true,
-  "gnetId": null,
+  "fiscalYearStartMonth": 0,
   "graphTooltip": 1,
-  "id": 3,
-  "iteration": 1775053902502,
   "links": [],
   "panels": [
     {
       "collapsed": false,
-      "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -43,20 +40,22 @@
       "type": "row"
     },
     {
-      "datasource": "-- Grafana --",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "diZQQVpDz"
+      },
       "fieldConfig": {
         "defaults": {
           "color": {
             "mode": "thresholds"
           },
-          "custom": {},
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
                 "color": "green",
-                "value": null
+                "value": 0
               },
               {
                 "color": "red",
@@ -87,34 +86,49 @@
         },
         "showThresholdLabels": false,
         "showThresholdMarkers": true,
-        "sizing": "auto",
-        "text": {}
+        "sizing": "auto"
       },
-      "pluginVersion": "7.4.0",
+      "pluginVersion": "12.4.2",
       "targets": [
         {
-          "queryType": "randomWalk",
-          "refId": "A"
+          "datasource": {
+            "type": "prometheus",
+            "uid": "diZQQVpDz"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "exemplar": false,
+          "expr": "node_load1",
+          "format": "heatmap",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "{{label_name}}",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
         }
       ],
       "title": "LA !",
       "type": "gauge"
     },
     {
-      "datasource": "-- Grafana --",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "diZQQVpDz"
+      },
       "fieldConfig": {
         "defaults": {
           "color": {
             "mode": "thresholds"
           },
-          "custom": {},
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
                 "color": "green",
-                "value": null
+                "value": 0
               },
               {
                 "color": "red",
@@ -145,34 +159,42 @@
         },
         "showThresholdLabels": false,
         "showThresholdMarkers": true,
-        "sizing": "auto",
-        "text": {}
+        "sizing": "auto"
       },
-      "pluginVersion": "7.4.0",
+      "pluginVersion": "12.4.2",
       "targets": [
         {
-          "queryType": "randomWalk",
-          "refId": "A"
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "node_load5",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
         }
       ],
       "title": "LA 5",
       "type": "gauge"
     },
     {
-      "datasource": "-- Grafana --",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "diZQQVpDz"
+      },
       "fieldConfig": {
         "defaults": {
           "color": {
             "mode": "thresholds"
           },
-          "custom": {},
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
                 "color": "green",
-                "value": null
+                "value": 0
               },
               {
                 "color": "red",
@@ -203,10 +225,9 @@
         },
         "showThresholdLabels": false,
         "showThresholdMarkers": true,
-        "sizing": "auto",
-        "text": {}
+        "sizing": "auto"
       },
-      "pluginVersion": "7.4.0",
+      "pluginVersion": "12.4.2",
       "targets": [
         {
           "disableTextWrap": false,
@@ -215,7 +236,6 @@
           "fullMetaSearch": false,
           "includeNullMetadata": true,
           "legendFormat": "__auto",
-          "queryType": "randomWalk",
           "range": true,
           "refId": "A",
           "useBackend": false
@@ -225,20 +245,22 @@
       "type": "gauge"
     },
     {
-      "datasource": "-- Grafana --",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "diZQQVpDz"
+      },
       "fieldConfig": {
         "defaults": {
           "color": {
             "mode": "thresholds"
           },
-          "custom": {},
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
                 "color": "green",
-                "value": null
+                "value": 0
               },
               {
                 "color": "red",
@@ -271,17 +293,15 @@
           "values": false
         },
         "showPercentChange": false,
-        "text": {},
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "7.4.0",
+      "pluginVersion": "12.4.2",
       "targets": [
         {
           "editorMode": "code",
           "expr": "(node_memory_MemFree_bytes{instance=\"$Instance\"} / node_memory_MemTotal_bytes{instance=\"$Instance\"}) * 100",
           "legendFormat": "__auto",
-          "queryType": "randomWalk",
           "range": true,
           "refId": "A"
         }
@@ -290,25 +310,32 @@
       "type": "stat"
     },
     {
-      "datasource": "-- Grafana --",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "diZQQVpDz"
+      },
       "fieldConfig": {
         "defaults": {
           "color": {
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
             "hideFrom": {
-              "graph": false,
               "legend": false,
               "tooltip": false,
               "viz": false
             },
+            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 1,
             "pointSize": 5,
@@ -316,9 +343,15 @@
               "type": "linear"
             },
             "showPoints": "auto",
+            "showValues": false,
             "spanNulls": false,
-            "stacking": {},
-            "thresholdsStyle": {}
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
           },
           "mappings": [],
           "thresholds": {
@@ -326,7 +359,7 @@
             "steps": [
               {
                 "color": "green",
-                "value": null
+                "value": 0
               },
               {
                 "color": "red",
@@ -353,24 +386,22 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
-        },
-        "tooltipOptions": {
-          "mode": "single"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "12.4.2",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "diZQQVpDz"
           },
           "disableTextWrap": false,
           "editorMode": "code",
           "exemplar": false,
-          "expr": " round(100 - (avg by (instance) (irate(node_cpu_seconds_total{job=\"node-exporter\",mode=\"idle\"}[5m])) * 100))",
+          "expr": "round(100 - (avg by (instance) (irate(node_cpu_seconds_total{job=\"nodeexporter\",mode=\"idle\"}[5m])) * 100))",
           "format": "time_series",
           "fullMetaSearch": false,
           "includeNullMetadata": true,
@@ -386,25 +417,32 @@
       "type": "timeseries"
     },
     {
-      "datasource": "-- Grafana --",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "diZQQVpDz"
+      },
       "fieldConfig": {
         "defaults": {
           "color": {
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
             "hideFrom": {
-              "graph": false,
               "legend": false,
               "tooltip": false,
               "viz": false
             },
+            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 1,
             "pointSize": 5,
@@ -412,9 +450,15 @@
               "type": "linear"
             },
             "showPoints": "auto",
+            "showValues": false,
             "spanNulls": false,
-            "stacking": {},
-            "thresholdsStyle": {}
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
           },
           "mappings": [],
           "thresholds": {
@@ -422,7 +466,7 @@
             "steps": [
               {
                 "color": "green",
-                "value": null
+                "value": 0
               },
               {
                 "color": "red",
@@ -449,20 +493,17 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
-        },
-        "tooltipOptions": {
-          "mode": "single"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "12.4.2",
       "targets": [
         {
           "editorMode": "code",
           "expr": "(node_filesystem_avail_bytes{instance=\"$Instance\"} * 100) / node_filesystem_size_bytes{instance=\"$Instance\"}",
           "legendFormat": "__auto",
-          "queryType": "randomWalk",
           "range": true,
           "refId": "A"
         }
@@ -471,16 +512,13 @@
       "type": "timeseries"
     }
   ],
-  "schemaVersion": 27,
-  "style": "dark",
+  "preload": false,
+  "schemaVersion": 42,
   "tags": [],
   "templating": {
     "list": [
       {
-        "allValue": null,
         "current": {
-          "selected": true,
-          "tags": [],
           "text": [
             "nodeexporter:9100"
           ],
@@ -488,12 +526,7 @@
             "nodeexporter:9100"
           ]
         },
-        "datasource": null,
         "definition": "label_values(instance)",
-        "description": null,
-        "error": null,
-        "hide": 0,
-        "includeAll": false,
         "label": "Instance",
         "multi": true,
         "name": "Instance",
@@ -505,23 +538,20 @@
         },
         "refresh": 1,
         "regex": "",
-        "skipUrlSync": false,
+        "regexApplyTo": "value",
         "sort": 1,
-        "tagValuesQuery": "",
-        "tags": [],
-        "tagsQuery": "",
-        "type": "query",
-        "useTags": false
+        "type": "query"
       }
     ]
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-15m",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "browser",
-  "title": "NODE",
-  "uid": "fe9efxcu2vta8a",
-  "version": 5
+  "title": "Inode",
+  "uid": "fe9efxcu2vta8a1",
+  "version": 5,
+  "weekStart": ""
 }
